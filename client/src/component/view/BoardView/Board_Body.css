@@ -1,0 +1,127 @@
+
+
+
+.writerBody img {
+    width: 15px;
+    height: 15px;
+    padding-left: 3px;
+}
+
+.top {
+    border-top: 2px solid #2E8B57;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+
+
+
+.titleBody{
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size:  large;
+}
+
+.writerBody{
+    display: inline;
+    border-right: 1px solid #ddd;
+    padding-right: 15px;
+}
+.dateBody{
+    display: inline;
+    margin-left: 15px;
+}
+
+.contentText{
+    padding-bottom: 100px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2E8B57;
+}
+
+.button_write{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.post_list{
+    background-color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 7px;
+    color: #4CAF50;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    
+    margin-right: 15px;
+}
+
+.button_modify{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button_delete{
+    background-color: #858b85;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.buttonDiv{
+    display: inline;
+    float: right;
+}
+
+header > button {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 1.5px;
+}
+
+span > button{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 1.5px;
+}
+
+/* @media screen and (max-width:1300px) {
+    .empty_1 {
+        flex-basis: 100px;
+        flex-shrink: 0;
+    }
+} */

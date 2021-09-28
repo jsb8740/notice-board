@@ -1,0 +1,68 @@
+.PwBorder{
+    margin: 0 auto;
+    border: 2px solid  #4CAF50;
+    position: relative;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.CheckTopitem{
+    margin-top: 55px;
+    display: flex;
+    flex-basis: 1100px;
+    flex-shrink: 0;
+    flex-direction: column;
+    border-top:3px solid #2E8B57;
+}
+
+.CheckdivStyle{
+    padding-top: 60px;
+    display: flex ;
+    flex-direction: column;
+}
+
+.CheckPwInput{
+    height: 25px;
+    width: 250px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    outline: none;
+}
+
+.Cancelbtn {
+    background-color: #858b85;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin:5px
+} 
+.Cancelbtn:focus{
+    background-color: rgb(233, 230, 230);
+    border: 3px solid rgb(120, 165, 216);
+}
+
+/* input[type="password"] {
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    outline: none;
+} */
+
+.Okbtn{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin:5px
+}

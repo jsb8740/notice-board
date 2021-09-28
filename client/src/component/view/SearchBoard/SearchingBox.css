@@ -1,0 +1,71 @@
+
+
+.combobox{
+    width: 100px;
+    height: 34px;
+    position: relative;
+    left: 21%;
+    top: 50%;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    outline: none;
+}
+
+.combobox:focus{
+    border: 3px solid rgb(120, 165, 216);
+    background-color: rgb(233, 230, 230);
+}
+
+.searchBox{
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    width:400px;
+    height:30px;
+    margin: 0 auto; /* 검색창 중앙에 */
+}
+
+.btnImg{
+    /* object-fit: cover; */
+    height: 15px;
+    width: 15px;
+    border-radius: 10px 0 0 10px;
+    padding-left: 5px;
+    padding-top: 6px;
+    display: inline;
+}
+
+.searchText{
+    background-color: white;
+    /* border-radius: 10px 0 0 10px; */
+    border-radius: 0 7px 7px 0;
+    border: none;
+    width: 90%;
+    height: 70%;
+    font-size: 1em; 
+    display: inline;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.searchBox:focus-within {   /* 하위 요소를 클릭하면 상위요소가  선택됨*/
+    border: 3px solid rgb(120, 165, 216);
+    background-color: rgb(233, 230, 230);
+}
+
+.searchText:focus{
+    background-color: rgb(233, 230, 230);
+}
+.searchText:focus + .searchBtn{
+    background-color: rgb(233, 230, 230);
+}
+
+.searchLayout{
+    display: flex;
+    flex-direction: row;
+}
+
+.searchContent{
+    flex-basis: 1100px;
+    flex-shrink: 0;
+}

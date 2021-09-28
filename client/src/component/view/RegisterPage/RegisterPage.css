@@ -1,0 +1,55 @@
+.PwText{
+    /* height: 25px;
+    width: 250px; */
+    /* margin: 0 auto; */
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    outline: none;
+}
+
+.TextInput{
+    /* height: 25px;
+    width: 250px; */
+    /* margin: 0 auto; */
+    background-color: white;
+    border-radius: 10px;
+    border:2px solid #3CB371;
+    outline: none;
+}
+
+.PwText:focus{
+    background-color: rgb(233, 230, 230);
+    border: 3px solid rgb(120, 165, 216);
+}
+
+.TextInput:focus{
+    background-color: rgb(233, 230, 230);
+    border: 3px solid rgb(120, 165, 216);
+}
+
+.okBtn{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 1.5px;
+}
+
+.cancelBt{
+    background-color: rgb(196, 194, 194);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 1.5px;
+}

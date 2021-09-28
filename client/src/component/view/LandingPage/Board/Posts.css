@@ -1,0 +1,66 @@
+
+
+/* Board 페이지의 main부분  content부분*/
+
+td img {
+    width: 15px;
+    height: 15px;
+    padding-left: 3px;
+}
+
+table{
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.center_text{
+    text-align: center;
+}
+
+table thead tr th{
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-bottom:1px solid #3CB371;
+    border-top:2px solid #2E8B57;
+}
+
+.contents tr td{
+    border-bottom: 1px solid #dadada;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.contents tr:hover{
+    background-color: #dadada;
+}
+
+table tfoot tr{
+    border-bottom:1px solid #3CB371;
+
+}
+
+#last_td{
+    padding-bottom: 1rem;
+}
+
+
+tr td a:link{
+    color: black;
+}
+tr td a{
+    text-decoration: none;
+}
+
+.num{
+    width: 8rem;
+}
+.title{
+    width: 45rem;
+}
+.writer{
+    width: 14rem;
+}
+.date{
+    width: 10rem;
+}

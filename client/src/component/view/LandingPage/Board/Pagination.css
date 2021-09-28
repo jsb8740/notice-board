@@ -1,0 +1,34 @@
+.pagination{
+    margin-top: 40px;
+}
+.pagination li{
+    display: inline-block;
+}
+
+.pagination a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    
+}
+
+.pagination a:active{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.pagination a:hover:not(.selected){
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+.pagination ul{
+    list-style: none;
+}
+
+.selected {
+    background-color: #4CAF50;
+    border-radius: 5px;
+    color: white;
+}

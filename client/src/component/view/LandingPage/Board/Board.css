@@ -1,0 +1,97 @@
+
+/* main부분을 만드는중 */
+.write_Button{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.home_Button {
+    background-color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 7px;
+    color: #4CAF50;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    
+    margin-right: 15px;
+}
+
+.registerButton{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+    top: -150%;
+    left: 230%;
+
+    margin: 1.5px;
+}
+
+.logoutButton{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+    top: -150%;
+    left: 310%;
+
+    margin: 1.5px;
+}
+
+.loginButton{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    padding: 7px 14px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+    top: -150%;
+    left: 230%;
+
+    margin: 1.5px;
+}
+/* .empty1{
+    flex-basis: 400px;
+    flex-shrink: 1;
+    border:1px solid black;
+    
+}
+.empty2{
+    flex-basis: 400px;
+    flex-shrink: 1;
+    border:1px solid black;
+    
+} */
+
+/* 화면사이즈가 작으면 좌우 공백을 100px로 */
+/* @media screen and (max-width:1300px) {
+    .empty1 {
+        flex-basis: 100px;
+        flex-shrink: 0;
+    }
+} */

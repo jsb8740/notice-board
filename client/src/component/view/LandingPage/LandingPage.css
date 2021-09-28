@@ -1,0 +1,33 @@
+.topitem{
+    margin-top: 55px;
+    display: flex;
+    flex-basis: 1100px;
+    flex-shrink: 0;
+    flex-direction: row;
+    border-top:3px solid #2E8B57;
+}
+
+.topContent {
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* height: 200px; */
+}
+
+.boardTitle{
+    position: relative;
+    top:-25%;
+    left: 5%;;
+    font-size:large
+}
+
+span a:link{
+    color: black;
+}
+
+span a:visited{
+    color: black;
+}
+span a{
+    text-decoration: none;
+}
