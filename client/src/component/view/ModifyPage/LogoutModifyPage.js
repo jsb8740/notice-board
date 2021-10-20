@@ -22,7 +22,13 @@ function LogoutModifyPage() {
     //text로 value보냄 그리고 update
     //로그인한사람이 글쓴거면 비로그인일경우 안보이게
     //로그인한자신이 쓴글만 수정 삭제 보임
+    const onPassWordHandler = (event) => {
+        setPassWord(event.target.value)
+    }
 
+    const onNickNameHandler = (event) => {
+        setNickName(event.target.value)
+    }
 
     const onTitleHandler = (event) => {
         setTitle(event.target.value)
@@ -34,7 +40,7 @@ function LogoutModifyPage() {
 
 
     const dispatch = useDispatch();
-    const onSubmitHandler = (event) =>{
+    const onClickOkBtnHandler = (event) =>{
         event.preventDefault();
         console.log(location.state.boardId)
         let body = {
@@ -72,6 +78,16 @@ function LogoutModifyPage() {
         setNickName(response.data.writer)
         setPassWord(location.state.password)
     }
+
+    const onClickCancelBtnHandler = (event) => {
+        event.preventDefault();
+
+        let cancelCheck = window.confirm('글 수정을 취소하시겠습니까?');
+
+        if(cancelCheck === true) {
+            history.goBack();
+        }
+    }
     useEffect(() => {
         if (location.state.boardId === undefined || location.state.boardId === null) {
             history.goBack();
@@ -85,29 +101,43 @@ function LogoutModifyPage() {
     }, [])
 
     return (
-        <div style={{
-            display: 'flex', justifyContent: 'center', alignItems: 'center',
-            width: '100%', height: '100vh'
-        }}>
-            <h2>logout글수정</h2>
-            <form onSubmit={onSubmitHandler}>
-                <label>닉네임</label>
-                <input style={{width: '60px'}}
-                type='text' value={NickName} readOnly/>
-                <label>비밀번호</label>
-                <input style={{width: '60px'}} 
-                type='password' value={PassWord} readOnly/>
 
-                <hr/>
-                <label>title</label>
-                <input type='text' value={Title} onChange={onTitleHandler} />
-                <hr/>
+        <div className="content">
+            <div className="empty1">
+            </div>
 
-                <textarea value={Contents} onChange={onContentsHandler} />
-                <button>go</button>
-            </form>
+            <div className="item">
+                <div className="top">
+                    <div className="titleBody">
+                        <input className="titleInput" type='text' value={Title} onChange={onTitleHandler} placeholder="제목을 입력해 주세요" />
+                    </div>
+                    <div className="writerBody">
+                        <input className="WriterInput" type='text' value={NickName} onChange={onNickNameHandler} />
+                    </div>
 
+                    <div style={{ display: 'inline', marginLeft: '15px' }}>
+                        <input className="PwInput" type='password' value={PassWord} onChange={onPassWordHandler} />
+                    </div>
+                </div>
+                <div className="contentText">
+                    <textarea className="ContentInput" value={Contents} onChange={onContentsHandler} />
+                    <div style={{ marginTop: '10px' }}>
+                        <button className="button_cancel" onClick={onClickCancelBtnHandler}>취소</button>
+                        <button className="button_ok" onClick={onClickOkBtnHandler}>등록</button>
+                    </div>
+
+                </div>
+
+                <div style={{ marginBottom: '20px' }}>
+
+                </div>
+            </div>
+
+            <div className="empty1">
+            </div>
         </div>
+
+
     )
 }
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { withRouter, useLocation, useHistory } from 'react-router'
 import { boardModify } from '../../../_action/board_action';
+import img from '../Commons/logincheck.png'
 
 function LoginModifyPage() {
     const location = useLocation();
@@ -32,7 +33,7 @@ function LoginModifyPage() {
 
 
     const dispatch = useDispatch();
-    const onSubmitHandler = (event) =>{
+    const onClickOkBtnHandler = (event) =>{
         event.preventDefault();
         console.log(location.state.boardId)
         let body = {
@@ -56,6 +57,15 @@ function LoginModifyPage() {
         // alert('gd')
     }
 
+    const onClickCancelBtnHandler = (event) => {
+        event.preventDefault();
+
+        let cancelCheck = window.confirm('글 수정을 취소하시겠습니까?');
+
+        if (cancelCheck === true) {
+            history.goBack();
+        }
+    }
 
     const fectchBoardData = async () => {
         boardId = location.state;
@@ -80,24 +90,56 @@ function LoginModifyPage() {
         }
     }, [])
     return (
-        <div style={{
-            display: 'flex', justifyContent: 'center', alignItems: 'center',
-            width: '100%', height: '100vh'
-        }}>
-            <h2>login글수정</h2>
-            <form onSubmit={onSubmitHandler}>
-                <label>닉네임 : {NickName}</label>
+        // <div style={{
+        //     display: 'flex', justifyContent: 'center', alignItems: 'center',
+        //     width: '100%', height: '100vh'
+        // }}>
+        //     <h2>login글수정</h2>
+        //     <form onSubmit={onSubmitHandler}>
+        //         <label>닉네임 : {NickName}</label>
                 
-                <hr/>
-                <label>title</label>
-                <input type='text' value={Title} onChange={onTitleHandler} />
-                <hr/>
+        //         <hr/>
+        //         <label>title</label>
+        //         <input type='text' value={Title} onChange={onTitleHandler} />
+        //         <hr/>
 
-                <textarea value={Contents} onChange={onContentsHandler} />
-                <button>go</button>
-            </form>
+        //         <textarea value={Contents} onChange={onContentsHandler} />
+        //         <button>go</button>
+        //     </form>
+        //     </div>   
+            //
+            <div className="content">
+            <div className="empty1">
+            </div>
 
+            <div className="item">
+                <div className="top">
+                    <div className="titleBody">
+                        <input className="titleInput" type='text' value={Title} onChange={onTitleHandler} placeholder="제목을 입력해 주세요" />
+                    </div>
+                    <div className="writerBody">
+                        {NickName}<img src={img} />
+                    </div>
+
+                </div>
+                <div className="contentText">
+                    <textarea className="ContentInput" value={Contents} onChange={onContentsHandler} />
+                    <div style={{ marginTop: '10px' }}>
+                        <button className="button_cancel" onClick={onClickCancelBtnHandler}>취소</button>
+                        <button className="button_ok" onClick={onClickOkBtnHandler}>등록</button>
+                    </div>
+
+                </div>
+
+                <div style={{ marginBottom: '20px' }}>
+
+                </div>
+            </div>
+
+            <div className="empty1">
+            </div>
         </div>
+        
     )
 }
 
